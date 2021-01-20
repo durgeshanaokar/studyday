@@ -32,7 +32,7 @@ public class InfinispanGreetingResource {
     
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("getvalue/{key}")
+    @Path("/getvalue/{key}")
     public String getvalue(@PathParam String key) {
     	LOGGER.info("Inside getvalue key "+key);
     	String value = cache.get(key);
